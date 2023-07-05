@@ -9,6 +9,11 @@ def load_encoding(filename, index, encoding_size=128):
         f.seek(index * encoding_size * 8)
         encoding = np.fromfile(f, dtype=np.float64, count=encoding_size)
     return encoding
+def load_all(filename,total):
+    data = list()
+    for i in range(total):
+        data.append(load_encoding(filename, i))
+    return data
 
 
 def save_encodings(encodings, filename):
@@ -43,15 +48,28 @@ def guardarCaracterisiticas(filename):
 
 #guardarCaracterisiticas("faceEncodings.bin")
 
+def comparacionPares(comparaciones, vectores):
+    resultados = list()
+    for i in range(comparaciones):
+        num1 = random.randint(0, 13175)
+        num2 = random.randint(0, 13175)
+        resultados.append(np.linalg.norm(vectores[num1] - vectores[num2]))
+    return resultados
+
+def knnSequential(k, query):
+    pass
+def rangeSearch(r, query):
+    pass
 
 
+vectores = load_all("faceEncodings.bin",13176)
 
-start = time.time()
-xlocal = load_encoding("faceEncodings.bin", 13000)
-print((time.time()-start)*1000)
-print(xlocal)
-
-print(os.path.getsize("faceEncodings.bin"))
-print(os.path.getsize("faceEncodings.bin")/(128*8))
-
+#linealScan()
+lista = comparacionPares(15000, vectores)
+# Crear el histograma
+plt.hist(lista, bins=50)
+plt.xlabel('Distancia Euclidiana')
+plt.ylabel('Frecuencia')
+plt.title('Histograma de Distancias Euclidianas 9000')
+plt.show()
 
