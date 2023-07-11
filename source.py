@@ -92,8 +92,8 @@ class RtreeIndex:
     def recoverImgs(self, files):
         images = list()
         for p in self.searhResults:
-            print(files[p])
-            images.append(files[p])
+            print(files[str(p)])
+            images.append(files[str(p)])
         return images
 
 
