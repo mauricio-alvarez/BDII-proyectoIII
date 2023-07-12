@@ -31,9 +31,9 @@ Estan todos los vectores
         - Nuestra dimensión es de 128 porque el facereconding nos retorna vectores de 128 x 1
         - Tenemos una capacidad de 3
         - Todo en el archivo "all-index" para la memoria secundaria.
-    - loadRIndex: Lo configura y lo lee ademas de q guarda en la variable global ind,desde el archivo en memoria secundaria
-    - searchknn: Busca los knn más cercanos y los guarda en searhResults
-    - recoverImgs: hace un for en una lista de numeros para luego recuperar las rutas de las imagenes hasheando el id de cada vector y retornamos dicha lista.   
+        - loadRIndex: Lo configura y lo lee ademas de q guarda en la variable global ind,desde el archivo en memoria secundaria
+        - searchknn: Busca los knn más cercanos y los guarda en searhResults
+        - recoverImgs: hace un for en una lista de numeros para luego recuperar las rutas de las imagenes hasheando el id de cada vector y retornamos dicha lista.   
 
 Contiene la clase Kdtree, con la siguiente estructura:
     - Usamos el de la libreria scipy.spatial, siendo el que posee la solucion de escalamiento
@@ -44,6 +44,8 @@ Contiene la clase Kdtree, con la siguiente estructura:
     - searchknn:buscar los **n vectores** más cercanos
     - recoverImgs: Recuperar las imagenes.
 
-- **Archivos generados por el desarrollo del backend:**
-[Descargar archivos](https://drive.google.com/drive/folders/1a20unbmjfS_bZHMhosFUuWpFwGwLTRIz)
+- **Experminetos**
+![Imagen de WhatsApp 2023-07-12 a las 17 58 50](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/8b73d02a-d0de-4d59-8d05-677e182f4f3a)
+![Imagen de WhatsApp 2023-07-12 a las 17 55 48](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/ff18de7f-5dc7-463f-904b-a4b26d2465ec)
+![Imagen de WhatsApp 2023-07-12 a las 17 56 16](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/20a13657-4173-4471-bdb1-04f87fc294c2)
 
