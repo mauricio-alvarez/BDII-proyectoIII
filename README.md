@@ -15,12 +15,10 @@ La base de datos usada en este proyecto consiste de registros de publicaciones a
 ## **GUI** (Frontend)
 
 ## ***Dominio de datos:*** (Backend)
-- ****
-Presenta el código para poder levantar la base de datos con las tablas “articles” , “versions” y “authors_parsed”.
-- ****
-Contiene un diccionario que asocia el id de documento con la posición en el archivo
-- ****
-Contiene un diccionario que asocia cada keyword con su id y cuantas veces se repite en el documento
+- **faceEncodings_metadata.json**
+Presenta el id y la ruta.
+- **faceEncodings.bin**
+Estan todos los vectores
 - **Source.py**
 Contiene la clase Sequential, con la siguiente estructura:
     - Su objetivo es traer todos los registros de la memoria secundaria
@@ -46,27 +44,6 @@ Contiene la clase Kdtree, con la siguiente estructura:
     - searchknn:buscar los **n vectores** más cercanos
     - recoverImgs: Recuperar las imagenes.
 
-- **.py**
-Contiene la clase Postgre:
-    - connectToDB: conecta la base de datos.
-    - loadData: Procesamos los articulos uno a la vez para rellenar cada registro en las tablas de la base de datos. 
-    - createIndex:
-Esta funcion recibe una lista con los elementos de los articulos que queremos indexar. Ya que solo estamos indexando el titulo y el abstract, solo recibe esos paramentros. En postgresql se asigna relevancia con las letras A,B,C,D entonces para los 4 primeros elementos de la lista se asigna una letra.
-Posteriorme se crea un columna tsvector y se llena con los datos del title y abstract, vease que se puso con mas importante al titulo.
-    - process_text:
-La funcion to_tsquery de postgresql recibe como parametro una consulta preprocesada donde cada keyword se debe separar por un operador booleano, entonces se identifica algunos terminos del ingles asociados a algunos operadores y se los reemplaza en la query consultQuery: Forzamos la busqueda con el indice de los top-k resultados los cuales almacenamos en una lista que se mostrara en la GUI.
-	
-- **.py**
-    - recovery_query: Desglozamos la query para agregarlo a una lista, creamos los stopwords(lista) en query y agregamos  el 'no', 'don´t', 'doesn´t', 'didn´t', 'dont', filtramos por si la  query no es valida, si no es una negacion( lo que agregamos al stopword) lo va a agregar como un true, caso contrario lo agregará como false el query que le sigue al exceptions.
-
-    - serach_document:
-Un for en la query desempaquetada, si el valor es verdadero en la palabra, obtendremos todos los documentos de aquella y lo agregamos a Yes_documents, caso contrario lo añadimos en No_documents. y retornamos una diferencia de conjuntos entre Yes_document y No_document.
-
-    - sort_document: 
-Itera sobre la lista de indices, abrimos el archivo y luego movemos el puntero en la posicion de bits correspondiente, despues añadimos a documents, posteriormente convertimos el json en un diccionario, para finalizar en titles agregamos el titulo.
-Creamos una variable a un vector luego sacamos el tfidf a los documentos, luego sacamos el tfidf de la query, termiando sacando la similitud de coseno entre ellos.
-Un ultimo for para el topk con el coseno de similitud con título
-    - recoveryDara:Llamamos a todo.
 - **Archivos generados por el desarrollo del backend:**
 [Descargar archivos](https://drive.google.com/drive/folders/1a20unbmjfS_bZHMhosFUuWpFwGwLTRIz)
 
