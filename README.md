@@ -13,10 +13,6 @@ Para el presente proyecto usamos las librerías face_recognition, numpy, pandas,
 La base de datos usada en este proyecto consiste de registros de publicaciones académicas por parte de la universidad de Cornell, donde encontramos campos como autores, títulos de artículos, categorías, abstracts y id's para poder ubicarlos en la página de la universidad.
 
 ## **GUI** (Frontend)
-![Imagen de WhatsApp 2023-06-16 a las 17 19 08](https://github.com/mauricio-alvarez/BDII-proyecto2/assets/85258014/45be809c-fc34-4764-9462-2a1e2256164b)
-![Captura de pantalla 2023-06-18 225646](https://github.com/mauricio-alvarez/BDII-proyecto2/assets/85258014/37e33140-9159-46e2-af76-f318ded6be89)
-![Captura de pantalla 2023-06-18 225714](https://github.com/mauricio-alvarez/BDII-proyecto2/assets/85258014/4ecfb397-0901-4a48-8b21-fb9872c7c743)
-![Imagen de WhatsApp 2023-06-18 a las 23 17 43](https://github.com/mauricio-alvarez/BDII-proyecto2/assets/85258014/1be1fc8e-0a01-4746-bcc8-b6ed1bb24060)
 
 ## ***Dominio de datos:*** (Backend)
 - ****
