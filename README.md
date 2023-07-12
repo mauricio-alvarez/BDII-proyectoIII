@@ -20,14 +20,13 @@ Presenta el id y la ruta.
 - **faceEncodings.bin**
 Estan todos los vectores
 - **Source.py**
-Contiene la clase Sequential, con la siguiente estructura:
-    - Su objetivo es traer todos los registros de la memoria secundaria
-    - init: recibe todos los vectores con los que trabajaremos.
-    - knnSequential: usa una cola de prioridad, luego itera con los vectores, para calcular la distancia euclidiana con la función np.linalg.norm() teniendo como único parametro la diferencia entre la query y el vector, si la cola de prioridad supera el tamaño K, eliminamos el elemento más lejano.
-    - rangeSearch: le pasamos el Radio como parametro, iteramos todos los vectores, calculamos la misma distancia euclidiana y si menor a radio lo agregamos a una lista para luego retornarlo.
-
-Contiene la clase RtreeIndex, con la siguiente estructura:
-    - buildRindex: Le pasamos los vectores que queremos almacenar en un archivo r para memoria secundaria
+    - Contiene la clase Sequential, con la siguiente estructura:
+        - Su objetivo es traer todos los registros de la memoria secundaria
+        - init: recibe todos los vectores con los que trabajaremos.
+        - knnSequential: usa una cola de prioridad, luego itera con los vectores, para calcular la distancia euclidiana con la función np.linalg.norm() teniendo como único parametro la diferencia entre la query y el vector, si la cola de prioridad supera el tamaño K, eliminamos el elemento más lejano.
+        - rangeSearch: le pasamos el Radio como parametro, iteramos todos los vectores, calculamos la misma distancia euclidiana y si menor a radio lo agregamos a una lista para luego retornarlo.
+    -Contiene la clase RtreeIndex, con la siguiente estructura:
+        - buildRindex: Le pasamos los vectores que queremos almacenar en un archivo r para memoria secundaria
         - Nuestra dimensión es de 128 porque el facereconding nos retorna vectores de 128 x 1
         - Tenemos una capacidad de 3
         - Todo en el archivo "all-index" para la memoria secundaria.
