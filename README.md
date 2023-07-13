@@ -7,10 +7,8 @@
 - 
 ## ***Introducción:***
 Para el presente proyecto usamos las librerías face_recognition, numpy, pandas, matplotlib.pyplot, rtree.index importando la libreria Index y scipy.spatial importando la libreria KDTree.
+Realizamos  una búsqueda de imagenes basada en similitud utilizando el algoritmo KNN.
 
-
-## ***Libreria:***
-La base de datos usada en este proyecto consiste de registros de publicaciones académicas por parte de la universidad de Cornell, donde encontramos campos como autores, títulos de artículos, categorías, abstracts y id's para poder ubicarlos en la página de la universidad.
 
 ## **GUI** (Frontend)
 
