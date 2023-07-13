@@ -48,3 +48,9 @@ Contiene la clase Kdtree, con la siguiente estructura:
 ![Imagen de WhatsApp 2023-07-12 a las 17 56 16](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/20a13657-4173-4471-bdb1-04f87fc294c2)
 ![Imagen de WhatsApp 2023-07-12 a las 18 03 23](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/46b957ca-f1f4-47a1-a80f-bbb6e299977f)
 
+
+## **Tiempos**
+![image](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/a3fcee35-0711-4877-96cd-e3956f07613f)
+![image](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/e794a06a-bc2a-4ba8-b4c2-7270e700c341)
+![image](https://github.com/mauricio-alvarez/BDII-proyectoIII/assets/85258014/986ef9c8-2389-4ea3-a3e8-c64eb075ec9c)
+
